@@ -1,4 +1,7 @@
 "use strict";
+let vteste;
+vteste = 5000;
+console.log(vteste);
 let cursos = ["javascript", "typescript", "c++"];
 let valores = [10, 20, 2023];
 cursos.push("java");

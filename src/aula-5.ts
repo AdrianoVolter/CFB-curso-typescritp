@@ -1,5 +1,14 @@
+
+// union types
+let vteste:string|number;
+vteste = 5000
+
+console.log(vteste)
+
+
+
 let cursos:string[] = [ "javascript", "typescript", "c++"]; 
-// array do typo string
+// array do tipo string
 let valores = [10, 20, 2023]
 
 cursos.push("java");
