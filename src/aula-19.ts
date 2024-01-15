@@ -1,10 +1,10 @@
 //POO, Modificadores de Acesso
 
 class Computador{ //classe é um molde para criar objetos
-    nome: string=""; //atributo
-    ram:number=0;
-    cpu:number=0;
-    private ligado:boolean; //private: só pode ser acessado dentro da classe
+    public nome: string=""; //atributo
+    private ram:number=0;
+    private cpu:number=0;
+    protected ligado:boolean; //private: só pode ser acessado dentro da classe
 
     constructor(n:string, r:number, c:number){ //construtor é um método especial que é executado quando a classe é instanciada
         this.nome = n;
