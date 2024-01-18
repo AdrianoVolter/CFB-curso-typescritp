@@ -18,6 +18,13 @@ class Conta {
     get saldo() {
         return this.saldoConta;
     }
+    set saldo(valor) {
+        if (valor < 0) {
+            console.log(`Valor inválido`);
+            return;
+        }
+        this.saldoConta = valor;
+    }
     deposito(valor) {
         if (valor < 0) {
             console.log(`Valor inválido`);
@@ -103,4 +110,5 @@ const conta2 = new ContaPJ(121334445, "Maria");
 conta1.deposito(1000);
 console.log(conta1.saldo);
 conta1.saque(300);
+conta1.saldo = 2000;
 console.log(conta1.saldo);
