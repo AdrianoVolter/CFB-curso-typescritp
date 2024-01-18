@@ -1,5 +1,5 @@
 abstract class Conta { // transformando a classe conta em abstrata para não ser instanciada diretamente ,somente herdada
-    protected numeroConta: number;
+    private readonly numeroConta: number; //readonly não pode ser alterado
     protected titular: string;
     private saldoConta: number;
   
@@ -55,6 +55,7 @@ abstract class Conta { // transformando a classe conta em abstrata para não ser
       this.info();
     }
     info(): void {
+        //this.numeroConta = 0; // não pode ser alterado pois é readonly  
       console.log(`Tipo de conta: PF`);
       super.info();
       console.log(`CPF: ${this.cpf}`);
