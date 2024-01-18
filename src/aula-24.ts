@@ -19,16 +19,16 @@ class Conta {
     return this.saldoConta;
   }
   protected deposito(valor: number): void {
-    if(valor > 0){
-        console.log(`Valor inválido`)
-        return
+    if (valor < 0) {
+      console.log(`Valor inválido`);
+      return;
     }
     this.saldoConta += valor;
   }
   protected saque(valor: number): void {
-    if(valor > 0){
-        console.log(`Valor inválido`)
-        return
+    if (valor < 0) {
+      console.log(`Valor inválido`);
+      return;
     }
     if (valor >= this.saldoConta) {
       console.log(`Saldo insuficiente`);
@@ -109,12 +109,16 @@ const conta2 = new ContaPJ(121334445, "Maria");
 //   const conta3 = new ContaPF(45556666, "Paulo");
 //   const conta4 = new ContaPJ(1245666777, "Pedro");
 
-//   conta1.deposito(1000);
-//   console.log(conta1.saldo());
-//   conta2.deposito(10000);
-//   conta2.deposito(10000);
-//   console.log(conta2.saldo());
-// conta2.info();
+conta1.deposito(1000);
+console.log(conta1.saldo());
+conta1.saque(300);
+console.log(conta1.saldo());
+conta1.saque(200);
+console.log(`Saldo da conta:${conta1.saldo()}`);
+//conta2.deposito(10000);
+//conta2.deposito(10000);
+//console.log(conta2.saldo());
+//conta2.info();
 
 // console.log(conta1.titular);
 // console.log(conta1.numeroConta);
