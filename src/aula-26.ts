@@ -46,13 +46,22 @@ abstract class Conta { // transformando a classe conta em abstrata para não ser
       }
     }
   }
+
+  interface Tributos {
+    taxaCalculo: number;
+    calcularTributo(valor:number): number;
+  }
   
-  class ContaPF extends Conta {
+  class ContaPF extends Conta implements Tributos{
+    taxaCalculo=0.1;
     cpf: number;
     constructor(cpf: number, titular: string) {
       super(titular); //chamando o construtor da classe pai
       this.cpf = cpf;
       this.info();
+    }
+    calcularTributo(valor:number): number{
+        return valor*this.taxaCalculo;
     }
     info(): void {
         //this.numeroConta = 0; // não pode ser alterado pois é readonly  
