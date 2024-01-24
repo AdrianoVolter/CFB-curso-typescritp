@@ -44,7 +44,3 @@ var Motores;
     }
     Motores.Motor = Motor;
 })(Motores || (Motores = {}));
-const carro = new Veiculos.Carro("Celta");
-const motor = new Motores.Motor(1.0, 500);
-console.log(carro);
-console.log(motor.Potencia);
