@@ -12,7 +12,7 @@ enum dias {
 
 //console.log(dias.domingo);
 
-const d = new Date();
+const data = new Date();
 //console.log(dias[d.getDay()]);
 
 enum cores{

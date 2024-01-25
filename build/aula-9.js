@@ -9,7 +9,7 @@ var dias;
     dias[dias["sexta"] = 6] = "sexta";
     dias[dias["sabado"] = 7] = "sabado";
 })(dias || (dias = {}));
-const d = new Date();
+const data = new Date();
 var cores;
 (function (cores) {
     cores["vermelho"] = "#FF0000";
